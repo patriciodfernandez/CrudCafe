@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Inicio from "./components/Inicio";
-import ListaProductos from "./components/ListaProductos";
-import AgregarProductos from "./components/AgregarProductos";
+import ListaProductos from "./components/productos/ListaProductos";
+import AgregarProductos from "./components/productos/AgregarProductos";
 import Navegacion from "./components/commons/Navegacion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/commons/Footer";
@@ -21,7 +21,7 @@ function App() {
   const consultarAPI = async () => {
     try {
       const consulta = await fetch(URL);
-      console.log("consunlta",consulta);
+      console.log("consunlta", consulta);
 
       const respuesta = await consulta.json();
       console.log("respuesta", respuesta);
@@ -39,10 +39,13 @@ function App() {
           <Inicio></Inicio>
         </Route>
         <Route exact path="/productos">
-          <ListaProductos productos={productos}></ListaProductos>{" "}
+          <ListaProductos
+            productos={productos}
+            consultarApi={consultarAPI}
+          ></ListaProductos>{" "}
         </Route>
         <Route exact path="/productos/nuevo">
-          <AgregarProductos></AgregarProductos>{" "}
+          <AgregarProductos consultarApi={consultarAPI}></AgregarProductos>{" "}
         </Route>
       </Switch>
       <Footer></Footer>

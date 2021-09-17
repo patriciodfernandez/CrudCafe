@@ -3,10 +3,11 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Swal from "sweetalert2";
+import { withRouter } from "react-router";
 
-const AgregarProductos = () => {
+const AgregarProductos = (props) => {
   const URL = process.env.REACT_APP_API_URL;
-  
+
   const [nombreProducto, setNombreProducto] = useState("");
   const [precioProducto, setPrecioProducto] = useState("");
   const [categoria, setCategoria] = useState("");
@@ -53,9 +54,17 @@ const AgregarProductos = () => {
             "Se carga un nuevo producto en la cafeteria",
             "success"
           );
-          setNombreProducto("");
-          setPrecioProducto("");
-          setCategoria("");
+
+          // limpiar form
+
+          // setNombreProducto("");
+          // setPrecioProducto("");
+          // setCategoria("");
+
+          // recargar productos
+          props.consultarApi();
+
+          props.history.push("/productos");
         }
       } catch (error) {
         console.log(error);
@@ -142,4 +151,4 @@ const AgregarProductos = () => {
   );
 };
 
-export default AgregarProductos;
+export default withRouter(AgregarProductos);

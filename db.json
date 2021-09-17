@@ -1,18 +1,6 @@
 {
   "cafeteria": [
     {
-      "nombreProducto": "Cafe con leche",
-      "precioProducto": "90",
-      "categoria": "bebida-caliente",
-      "id": 1
-    },
-    {
-      "nombreProducto": "Submarinoo",
-      "precioProducto": "120",
-      "categoria": "bebida-caliente",
-      "id": 2
-    },
-    {
       "nombreProducto": "Bizcochitos",
       "precioProducto": "60",
       "categoria": "salado",
