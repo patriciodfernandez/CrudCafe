@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { faPenSquare } from "@fortawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const ItemProducto = ({ producto, consultarApi, history }) => {
   const eliminarProducto = (id) => {
@@ -57,15 +58,18 @@ const ItemProducto = ({ producto, consultarApi, history }) => {
         </p>
 
         <div>
+          <Link
+            to={`/productos/editar/${producto._id} `}
+            className="btn btn-warning mr-2 text-light"
+          >
+            <FontAwesomeIcon icon={faPenSquare}></FontAwesomeIcon>
+          </Link>
           <Button
             variant="danger"
             className="me-2"
-            onClick={() => eliminarProducto(producto.id)}
+            onClick={() => eliminarProducto(producto._id)}
           >
             <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-          </Button>
-          <Button variant="success">
-            <FontAwesomeIcon icon={faPenSquare}></FontAwesomeIcon>
           </Button>
         </div>
       </ListGroup.Item>

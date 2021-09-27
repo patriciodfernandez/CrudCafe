@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Inicio from "./components/Inicio";
 import ListaProductos from "./components/productos/ListaProductos";
-import AgregarProductos from "./components/productos/AgregarProductos";
+import AgregarProducto from "./components/productos/AgregarProducto";
+import EditarProducto from "./components/productos/EditarProducto";
 import Navegacion from "./components/commons/Navegacion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/commons/Footer";
@@ -42,10 +43,13 @@ function App() {
           <ListaProductos
             productos={productos}
             consultarApi={consultarAPI}
-          ></ListaProductos>{" "}
+          ></ListaProductos>
         </Route>
         <Route exact path="/productos/nuevo">
-          <AgregarProductos consultarApi={consultarAPI}></AgregarProductos>{" "}
+          <AgregarProducto consultarApi={consultarAPI}></AgregarProducto>
+        </Route>
+        <Route exact path="/productos/editar/:id">
+          <EditarProducto consultarApi={consultarAPI}></EditarProducto>
         </Route>
       </Switch>
       <Footer></Footer>

@@ -1,8 +1,8 @@
 {
   "cafeteria": [
     {
-      "nombreProducto": "Bizcochitos",
-      "precioProducto": "60",
+      "nombreProducto": "Bizcochitoss",
+      "precioProducto": "10",
       "categoria": "salado",
       "id": 3
     },
@@ -13,15 +13,9 @@
       "id": 4
     },
     {
-      "nombreProducto": "Nutella ",
-      "precioProducto": "70",
-      "categoria": "dulce",
       "id": 5
     },
     {
-      "nombreProducto": "Nutella BATIDOO",
-      "precioProducto": "70",
-      "categoria": "dulce",
       "id": 6
     },
     {
@@ -85,9 +79,9 @@
       "id": 16
     },
     {
-      "nombreProducto": "cafesito",
-      "precioProducto": "19",
-      "categoria": "bebida-caliente",
+      "nombreProducto": "Papas fritas ",
+      "precioProducto": "140",
+      "categoria": "salado",
       "id": 17
     }
   ]

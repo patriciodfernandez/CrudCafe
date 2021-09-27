@@ -15,7 +15,7 @@ const ListaProductos = ({ productos, consultarApi }) => {
             <ItemProducto
               producto={producto}
               consultarApi={consultarApi}
-              key={producto.id}
+              key={producto._id}
             ></ItemProducto>
           ))}
         </ListGroup>
