@@ -6,7 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icono {
+  font-size: 30px !important;
+  margin: 2vh;
+  font-weight: 900;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
