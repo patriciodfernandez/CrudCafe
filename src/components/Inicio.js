@@ -1,12 +1,11 @@
 import React from "react";
-import cafeFoto from "../img/cafesito.png"
+import cafeFoto from "../img/cafe.jpg";
 
 const Inicio = () => {
   return (
-   <div>
-<img src={cafeFoto} width= "100%" alt="imagen cafe"> 
-
-</img>   </div>
+    <div>
+      <img src={cafeFoto}   className="imagencafe" alt="imagen cafe"></img>{" "}
+    </div>
   );
 };
 
